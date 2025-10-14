@@ -5,7 +5,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Shopping</title>
      <link rel="stylesheet" href="css/style.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 <body>
      <div class="topnav">
@@ -29,24 +29,63 @@
                          <div class="flex justify-space-bet align-center">
                               <nav>
                                    <ul class="flex">
-                                        <li><a href="">Home</a></li>
+                                        <li><a class="active" href="">Home</a></li>
                                         <li><a href="">Contact</a></li>
                                         <li><a href="">About</a></li>
                                         <li><a href="">Sign up</a></li>
                                    </ul>
                               </nav>
-                              <div class="search flex">
-                                   <form action="" role="search">
-                                        <input type="search" name="query" placeholder="" required>
+                              <div class="flex align-center">
+                                   <button class="search"><span class="fa fa-search" aria-hidden="true"></span></button>
+                                   <form action="/" role="search">
+                                        <input type="search" name="query" placeholder="What you are looking for? " required>
                                         <button><span class="fa fa-magnifying-glass" aria-hidden="true"></span></button>
                                    </form>
                                    <button class="wishlist"><span class="fa fa-heart" aria-hidden="true"></span></button>
                                    <button class="cart"><span class="fa fa-shopping-cart" aria-hidden="true"></span></button>
+                                   <button class="menu"><span class="fa fa-bars" aria-hidden="true"></span></button>
                               </div>
                          </div>
                     </div>
                </div>
           </div>
      </header>
+     <main>
+          <div class="container">
+               <div class="banner" role="banner">
+                    <div class="row">
+                         <div class="col-3 col-m-12">
+                              <aside>
+                                   <ul>
+                                        <li><a class="drop" href="">Woman's Fashion</a></li>
+                                        <li><a class="drop" href="">Men's Fashion</a></li>
+                                        <li><a href="">Electronics</a></li>
+                                        <li><a href="">Home & Lifestyle</a></li>
+                                        <li><a href="">Medicine</a></li>
+                                        <li><a href="">Sports & Outdoor</a></li>
+                                        <li><a href="">Baby's & Toys</a></li>
+                                        <li><a href="">Groceries & Pets</a></li>
+                                        <li><a href="">Health & Beauty</a></li>
+                                   </ul>
+                              </aside>
+                         </div>
+                         <div class="col-9 col-m-12">
+                              <div class="slider">
+                                   <div class="slide">1</div>
+                                   <div class="slide">2</div>
+                                   <div class="slide active">
+                                        <figure>
+                                             <img src="img/iphone-14.webp" alt="iphone 14" width="892" height="344" class="img-resp">
+                                             <a class="shop" href="">Shop Now &rarr; </a>
+                                        </figure>
+                                   </div>
+                                   <div class="slide">4</div>
+                                   <div class="slide">5</div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </main>
 </body>
 </html>
