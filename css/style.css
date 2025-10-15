@@ -58,7 +58,6 @@ header :is(.wishlist,.cart,.menu,.search){ border: none; background: none; width
 
 
 
-.banner{ }
 .banner aside{ border-right: .5px solid #0000004d; padding-top: 40px;}
 .banner aside{ padding-right: 17px;}
 .banner aside li:not(:last-child){ margin-bottom: 16px; }
@@ -69,9 +68,38 @@ header :is(.wishlist,.cart,.menu,.search){ border: none; background: none; width
 .banner .slide{ display: none;}
 .banner .slide.active{ display: block;}
 .banner .slide a.shop{ color: #fff; position: absolute; bottom: 51px; left: 67px; text-decoration: underline; }
+.pager{ position: absolute; bottom: 11px; left: 50%; transform: translateX(-50%);}
+.pager li{ margin: 0 6px;}
+.pager a{ display: block; width: 12px; height: 12px; background: #808080; border-radius: 50%;}
+.pager a.active{ width: 14px; height: 14px; background: #fff; border: 2px solid #DB4444; }
+
+.subheading{ position: relative; margin:80px 0 24px;}
+.subheading p{ padding-left: 36px; line-height: 40px; color: #DB4444; font-size: 14px; font-weight: 600;}
+.subheading p::before{ content: ''; position: absolute; left: 0; width: 20px; height: 40px; background: #DB4444; border-radius: 4px; }
+h2{ font-size: 36px; font-weight: 600;}
 
 
+.todays{ margin-top: 60px; }
+.controls{ gap: 8px;}
+.controls a{ display: block; width: 46px; line-height: 46px; background: #f5f5f5; border-radius: 50%; text-align: center; font-size: 24px; color: #000;}
 
+
+.product-sm{ margin: 31px 0 60px; }
+.product-img{ background: #f5f5f5; position: relative; aspect-ratio: 270/250;  display: grid; place-items: center; border-radius: 4px; }
+.product-img .discount{ position: absolute; left: 12px; top: 12px; background: #DB4444; width: 55px; line-height: 26px; border-radius: 4px; color: #fff; text-align: center; }
+.product-sm :is(.wishlist,.preview){position: absolute; right: 12px; background: #fff; width: 34px; height: 34px; border-radius: 50%; text-align: center; color: #000; }
+.product-sm .wishlist{ top: 12px; }
+.product-sm .preview{ top: 54px; }
+.product-sm :is(.wishlist,.preview) a{ display: inline-block; color: #000; line-height: 34px; }
+.product-sm .addtocart{ position: absolute; left: 0; right: 0; bottom: 0; background: #000; color: #fff; line-height: 41px; text-align: center; border-radius: 0 0 4px 4px; display: none;}
+.product-sm:hover .addtocart{ display: block;}
+.product-desc h3{ font-size: 16px; font-weight: 600; margin-top: 16px;  }
+.product-desc .price{  margin:  8px 0;  color:#DB4444  }
+.product-desc .price del{ color: #00000080;}
+.product-desc .rating .star{  color: #00000040; }
+.product-desc .rating .star-full{ color: #FFAD33; }
+.view-all-products{ display: block; background: #DB4444; color: #fff; width: 234px; line-height: 56px; color: #fff; border-radius: 4px; text-align: center; margin: 0 auto 60px;}
+.sep{ height: 1px; border-bottom: .5px solid #0000004d }
 
 
 
