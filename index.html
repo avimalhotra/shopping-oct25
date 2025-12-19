@@ -35,7 +35,7 @@
                                         <li><a href="signup.html">Sign up</a></li>
                                    </ul>
                               </nav>
-                              <div class="flex align-center">
+                              <div class="flex align-center posr">
                                    <button class="search"><span class="fa fa-search" aria-hidden="true"></span></button>
                                    <form action="/" role="search">
                                         <input type="search" name="query" placeholder="What you are looking for? " required>
@@ -43,7 +43,17 @@
                                    </form>
                                    <a href="wishlist" class="wishlist"><span class="fa fa-heart" aria-hidden="true"></span></a>
                                    <a href="cart.html" class="cart"><span class="fa fa-shopping-cart" aria-hidden="true"></span></a>
+                                   <button class="account"><span class="fa fa-user"></span></button>
                                    <button class="menu"><span class="fa fa-bars" aria-hidden="true"></span></button>
+                                   <div class="account-dropdown">
+                                        <ul>
+                                             <li><a href=""><span class="fa fa-user"></span> Account</a></li>
+                                             <li><a href=""><span class="fa fa-bag-shopping"></span> My Orders</a></li>
+                                             <li><a href=""><span class="fa fa-circle-xmark"></span> My Cancellations</a></li>
+                                             <li><a href=""><span class="fa fa-star"></span>My Reviews</a></li>
+                                             <li><a href=""><span class="fas fa-arrow-right-from-bracket fa-rotate-180"></span> Signout</a></li>
+                                        </ul>
+                                   </div>
                               </div>
                          </div>
                     </div>
@@ -55,10 +65,30 @@
                <div class="banner" role="banner">
                     <div class="row">
                          <div class="col-3 col-m-12">
-                              <aside>
+                              <aside class="posr">
                                    <ul>
-                                        <li><a class="drop" href="">Woman's Fashion</a></li>
-                                        <li><a class="drop" href="">Men's Fashion</a></li>
+                                        <li><a class="drop" href="">Woman's Fashion</a>
+                                             <div class="cat-dropdown">
+                                                  <ul>
+                                                       <li><a href="">Product 11</a></li>
+                                                       <li><a href="">Product 12</a></li>
+                                                       <li><a href="">Product 13</a></li>
+                                                       <li><a href="">Product 14</a></li>
+                                                       <li><a href="">Product 15</a></li>
+                                                  </ul>
+                                             </div>
+                                        </li>
+                                        <li><a class="drop" href="">Men's Fashion</a>
+                                             <div class="cat-dropdown">
+                                                  <ul>
+                                                       <li><a href="">Product 21</a></li>
+                                                       <li><a href="">Product 22</a></li>
+                                                       <li><a href="">Product 23</a></li>
+                                                       <li><a href="">Product 24</a></li>
+                                                       <li><a href="">Product 25</a></li>
+                                                  </ul>
+                                             </div>
+                                        </li>
                                         <li><a href="">Electronics</a></li>
                                         <li><a href="">Home & Lifestyle</a></li>
                                         <li><a href="">Medicine</a></li>
@@ -667,5 +697,29 @@
                </div>
           </div>
      </footer>
+<script src="js/jquery.min.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
+ <script>
+$(function(){
+     $(".account").click(function(){
+          $(this).toggleClass("active");
+          $(".account-dropdown").slideToggle();
+     });
+
+     $("aside a.drop").click(function(e){
+          e.preventDefault();
+
+          if($(this).next().is(":visible")){
+               $(".cat-dropdown").fadeOut();
+          }
+          else{
+               $(".cat-dropdown").fadeOut(0);
+               $(this).next().fadeIn()
+          }
+     });
+
+
+});
+ </script>
 </body>
 </html>
