@@ -6,7 +6,9 @@
      <title>Shopping</title>
      <link rel="stylesheet" href="css/style.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer">
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.css">
+     <link rel="stylesheet"  href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+     <!-- <link rel="stylesheet"  href="css/slick.css"> -->
+      <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
      <div class="topnav">
@@ -102,7 +104,8 @@
                          </div>
                          <div class="col-9 col-m-12">
                               <div class="slider">
-                                   <div class="slide">
+                                   <div class="slides">
+                                        <div class="slide">
                                         <figure>
                                              <img src="img/iphone-14.webp" alt="iphone 14" width="892" height="344" class="img-resp">
                                              <a class="shop" href="">Shop Now &rarr; </a>
@@ -132,15 +135,10 @@
                                              <a class="shop" href="">Shop Now &rarr; </a>
                                         </figure>
                                    </div>
-
                                   
-                                   <!-- <ul class="pager flex align-center">
-                                        <li><a href=""></a></li>
-                                        <li><a href=""></a></li>
-                                        <li><a class="active" href=""></a></li>
-                                        <li><a href=""></a></li>
-                                        <li><a href=""></a></li>
-                                   </ul> -->
+                                   </div>
+                                  
+                                   
                               </div>
                          </div>
                     </div>
@@ -856,7 +854,7 @@
      </footer>
 <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
 <script src="js/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bxslider@4.2.17/dist/jquery.bxslider.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
  <script>
 $(function(){
      $(".account").click(function(){
@@ -884,24 +882,43 @@ $(function(){
      });
 
 
-     $(".slider").bxSlider({
-          auto:true,
-          controls:false
+//      $(".slider").bxSlider({
+//           auto:true,
+//           controls:false
+//      });
+
+//   $('.todays .controls a').click(function(e){
+//      e.preventDefault();
+//      const w=$('.ticker').width()/4;
+
+
+
+//      if($(this).text()=="←"){
+//           $('.ticker').scrollLeft("-"+w);
+//      }
+//      else{
+//           $('.ticker').scrollLeft(w);
+//      }
+//   });
+
+
+      $(".slides").slick({
+          // autoplay:true,
+          arrows:false,
+          dots:true
+          // appendDots:$(".pager")
      });
 
-  $('.todays .controls a').click(function(e){
-     e.preventDefault();
-     const w=$('.ticker').width()/4;
+
+     $(".ticker").slick({
+          infinite: true,
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          arrows:true
+     })
 
 
 
-     if($(this).text()=="←"){
-          $('.ticker').scrollLeft("-"+w);
-     }
-     else{
-          $('.ticker').scrollLeft(w);
-     }
-  })
 
 
 

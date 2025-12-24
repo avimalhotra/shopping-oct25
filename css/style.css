@@ -70,8 +70,15 @@ header .menu,header .search{ display: none;}
 .banner aside a{ display: block; font-size: 16px; line-height: 24px; color: #000;}
 .banner aside a.drop::after{ content: '>'; float: right; }
 .banner .cat-dropdown{ position: absolute; left: 100%; background: #fffa; top: 40px; white-space: nowrap; z-index: 1; transform: translateX(1px); padding: 40px; display: none; backdrop-filter: blur(75px);}
+.slider{ position: relative;}
+.slider .slick-dots{ position: absolute; list-style: none; padding: 0; bottom: 11px; left: 50%; transform: translateX(-50%);}
+.slider .slick-dots li{ margin: 0 6px;}
+.slider .slick-dots button{  width: 12px; height: 12px; background: #808080; border-radius: 50%;}
+.slider .slick-dots .slick-active button{ width: 14px; height: 14px; background: #fff; border: 2px solid #DB4444; border-radius: 50%; }
+.slider .slick-dots li button:before{ content: ''; display: none; }
 
-.banner .slider{ margin-top: 40px; } 
+
+.banner .slider{ margin-top: 40px;} 
 .banner .slide a.shop{ color: #fff; position: absolute; bottom: 51px; left: 67px; text-decoration: underline; }
 
 .banner .bx-wrapper{ box-shadow: 0 0 transparent; border: none; margin-bottom: 0;}
@@ -88,7 +95,9 @@ h2{ font-size: 36px;}
 
 
 .todays{ margin-top: 60px;  }
-.ticker{ display: flex; overflow-x: auto;}
+.ticker .slick-prev:before, .ticker .slick-next:before{ color: #DB4444;}
+
+.ticker{ display: flex; }
 .ticker-item{ flex: 0 0 25% }
 .controls{ gap: 8px;}
 .controls a{ display: block; width: 46px; line-height: 46px; background: #f5f5f5; border-radius: 50%; text-align: center; font-size: 24px; color: #000;}
