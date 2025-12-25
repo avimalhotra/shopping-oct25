@@ -152,13 +152,23 @@
                               <h2>Flash Sales</h2>
                          </div>
                          <div class="col-6">
-                              <div class="timer">Time left</div>
+                              <div class="timer">
+                                   <div class="flex align-center">
+                                        <div class="days">Days <span>00</span></div>
+                                        <div class="blink">:</div>
+                                        <div class="hours">Hours <span>00</span></div>
+                                        <div class="blink">:</div>
+                                        <div class="mins">Minutes <span>00</span></div>
+                                        <div class="blink">:</div>
+                                        <div class="secs">Seconds <span>00</span></div>
+                                   </div>
+                              </div>
                          </div>
                          <div class="col-3">
-                              <ul class="controls flex justify-right">
+                              <!-- <ul class="controls flex justify-right">
                                    <li><a href="">&larr;</a></li>
                                    <li><a href="">&rarr;</a></li>
-                              </ul>
+                              </ul> -->
                          </div>
                     </div>
                     <div class="ticker">
@@ -855,75 +865,6 @@
 <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> -->
 <script src="js/jquery.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
- <script>
-$(function(){
-     $(".account").click(function(){
-          $(this).toggleClass("active");
-          $(".account-dropdown").slideToggle();
-     });
-     $(".account").blur(function(){
-           $(this).removeClass("active");
-          $(".account-dropdown").slideUp();
-     })
-
-     $("aside a.drop").click(function(e){
-          e.preventDefault();
-
-          if($(this).next().is(":visible")){
-               $(".cat-dropdown").fadeOut();
-          }
-          else{
-               $(".cat-dropdown").fadeOut(0);
-               $(this).next().fadeIn()
-          }
-     });
-     $("aside a").blur(function(){
-           $(".cat-dropdown").fadeOut();
-     });
-
-
-//      $(".slider").bxSlider({
-//           auto:true,
-//           controls:false
-//      });
-
-//   $('.todays .controls a').click(function(e){
-//      e.preventDefault();
-//      const w=$('.ticker').width()/4;
-
-
-
-//      if($(this).text()=="←"){
-//           $('.ticker').scrollLeft("-"+w);
-//      }
-//      else{
-//           $('.ticker').scrollLeft(w);
-//      }
-//   });
-
-
-      $(".slides").slick({
-          // autoplay:true,
-          arrows:false,
-          dots:true
-          // appendDots:$(".pager")
-     });
-
-
-     $(".ticker").slick({
-          infinite: true,
-          slidesToShow: 4,
-          slidesToScroll: 4,
-          arrows:true
-     })
-
-
-
-
-
-
-
-});
- </script>
+ <script src="js/common.js"></script>
 </body>
 </html>
